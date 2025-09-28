@@ -1,5 +1,5 @@
 /*
-    Name: 
+    Name: Ashlyn Firlik
 */
 
 :root{
@@ -76,6 +76,8 @@ header{
     /* TO DO */
 }
 
+
+
 /* For All Headings */
 h1, h2, h3, h4{
     font-weight: 800;
@@ -133,7 +135,9 @@ nav{
 }
 
 nav ul{
+    display: flex;
     list-style-type: none;
+    justify-content: space-around;
     padding: 0;
     /* Styles were added here to arrange the content, I used flexbox */
     /* TO DO */
@@ -141,6 +145,7 @@ nav ul{
 
 nav a{
     display: block;
+    position: relative;
     font-size: 2.5rem;
     font-weight: 600;
     text-align: center;
@@ -163,6 +168,10 @@ nav a svg{
 nav a span{
     display: block;
     position: relative;
+    top: -110px;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 1;
     /* Styles were added here to arrange the content, I used top and z-index for this */
     /* TO DO */
 }
@@ -224,17 +233,27 @@ p{
     padding: 96px 32px;
     /* Styles were added here to arrange the content, I used grid */
     /* TO DO */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-items: center;
 }
 
 #plants h3, #plants > p{
     /* Styles were added here to arrange the content, these are grid children styles */
     /* TO DO */
+    grid-column: 1/-1;
+    text-align: start;
 }
 
 #plants section{
     /* Styles were added here to arrange the content, I used flexbox */
     /* TO DO */
     margin: 32px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 #plants h4{
@@ -247,6 +266,7 @@ p{
     width: 100%;
     max-width: 400px;
     height: auto;
+    order: -1;
 }
 
 .price{
@@ -256,7 +276,7 @@ p{
     padding: 12px 0;
     background-color: var(--mint);
     color: var(--dk-gray);
-    margin-top: 32px;
+    margin-top: auto;
 }
 
 /* Contact Section */
@@ -265,12 +285,17 @@ p{
     padding: 64px 32px;
     /* Styles were added here to arrange the content, I used grid */
     /* TO DO */
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 25px;
 }
 
 /* Contact Heading and Paragraph */
 #contact h3, #contact > p{
     /* Styles were added here to arrange the content, these are grid children styles */
     /* TO DO */
+    grid-column: span 2;
 }
 
 /* Contact text color */
@@ -361,12 +386,15 @@ th:nth-of-type(even), td:nth-of-type(even){
     margin: 16px auto;
     list-style-type: none;
     padding: 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 /* Heading for Social Media Section */
 #social h4{
     /* Styles were added here to arrange the content, these are grid children styles */
     /* TO DO */
+    grid-column: 1/-1;
 }
 
 #social a{
